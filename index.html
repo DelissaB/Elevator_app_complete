@@ -7,49 +7,72 @@
 </head>
 
 <body>
-  <div class="grid left"></div><div class="grid right"></div>
+  <!-- <div class="grid left"></div><div class="grid right"></div> -->
 
   <div id="elevator">
     <section id="p">
-      <h1>Delissa's Elevator</h1>
-        <div class="pannel">
-          <div>
-            <button class="btn btn-success btn-circle btn-circle-lg m-1"><i class="fa fa-check"></i> 1 </button>
-            <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 2 </button>
+      <div class="sidenav">
+        <h1>Please select a floor!</h1>
+        <div class="first">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage'))"> 1</button>
+        </div>
+        <!-- <div class="second" id="second"></div> -->
+        <div class="second">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage2'))"> 2</button>
+        </div>
+        <!-- <div class="third" id="third"></div> -->
+        <div class="third">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage3'))"> 3</button>
+        </div>
+        <div class="fourth">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage4'))"> 4</button>
+        </div>  
+        <div class="fifth">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage5'))"> 5</button>
+        </div>  
+        <div class="six">
+          <button type="button" class="btn btn-success btn-circle btn-circle-lg m-1" onclick="smoothScroll(document.getElementById('fullpage6'))"> 6</button>
+        </div>  
+            <!-- <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 2 </button>
             <button class="btn btn-success btn-circle btn-circle-lg m-1"><i class="fa fa-check"></i> 3 </button>
               <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 4 </button>
-            </div>
-            <!-- <div>
-              <button class="btn btn-success btn-circle btn-circle-lg m-1"><i class="fa fa-check"></i> 3 </button>
-              <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 4 </button>
-            </div> -->
-            <!-- <div>
               <button class="btn btn-success btn-circle btn-circle-lg m-1"><i class="fa fa-check"></i> 5 </button>
-              <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 6 </button>
-            </div> -->
+              <button class="btn btn-primary btn-circle btn-circle-lg m-1"><i class="fa fa-cog"></i> 6 </button> -->
+            </div>
           </div>
         </div>
     </section>
 
-    <section class="floor">
+    <div>
+    <section class="fullpage">;
       <h1>Welcome, to the first floor</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       <button title="Back">B</button>
     </section> 
     
-    <section class="floor">
+    <section class="fullpage2">
       <h1>Welcome, to the second floor</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       <button title="Back">B</button>
     </section> 
 
-    <section class="floor">
+    <section class="fullpage3">
       <h1>Welcome, to the third floor</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       <button title="Back">B</button>
     </section> 
 
-    <section class="floor">
+    <section class="fullpage4">
+      <h1>Welcome, to the fourth floor</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <button title="Back">B</button>
+    </section> 
+    <section class="fullpage5">
+      <h1>Welcome, to the fourth floor</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <button title="Back">B</button>
+    </section> 
+    <section class="fullpage6">
       <h1>Welcome, to the fourth floor</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
       <button title="Back">B</button>

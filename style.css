@@ -2,217 +2,143 @@ body {
   margin: 0; padding: 18px;
   overflow: hidden;
   background-size: 100px 100%;
-  /* background-image:
-    repeating-linear-gradient( left, 
-      hsla(0,0%,100%,0)      0%, 
-      hsla(0,0%,100%,0)      6%,
-      hsla(0,0%,100%, .1) 7.5%),
-    repeating-linear-gradient( left, 
-      hsla(0,0%,  0%,0)      0%, 
-      hsla(0,0%,  0%,0)      4%, 
-      hsla(0,0%,  0%,.03) 4.5%),
-    repeating-linear-gradient( left, 
-      hsla(0,0%,100%,0)     0%, 
-      hsla(0,0%,100%,0)   1.2%, 
-      hsla(0,0%,100%,.15) 2.2%),
-    linear-gradient( 180deg, 
-      hsl(0,0%,78%)   0%,
-      hsl(0,0%,90%)  47%, 
-      hsl(0,0%,78%)  53%, 
-      hsl(0,0%,70%) 100%); */
 }
 h1 {
   text-align: center;
-  text-shadow: 
+  /* text-shadow: 
     hsla(0,0%,40%,.5) 0 -1px 0, 
-    hsla(0,0%,100%,.6) 0 2px 1px;
+    hsla(0,0%,100%,.6) 0 2px 1px; */
 }
-#elevator {
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: silver; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  /* display: inline-flex; */
+  /* justify-content: center; */
+ /* align-items: center;  */
+  /* height: 200px; */ 
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 16px 30px 36px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  background-color: aqua;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* #elevator {
   transition: top 1s;
   position: relative; 
   top: 0;
-}
-.floor {
+} */
+/* .floor {
+  background-color: blueviolet;
   float: left;
-}
-.panel {
-  background: rgba(225,225,200,0.5);
-  background-image: 
-    linear-gradient(180deg, 
-      transparent             0%, 
-      transparent            10%,
-      rgba(255,255,255,0.6)  45%, 
-      transparent            55%, 
-      rgba(255,255,255,0.6)  65%,
-      rgba(255,255,255,0.4)  85%, 
-      transparent            95%, 
-      transparent           100%);
-  margin: 0 auto;
-  width: 246px;
-  padding: 25px 5px;
-  border: 4px outset rgba(255,255,255,0.2);
-}
-.pannel button,
-.floor button {
-  display: inline-block;
-  cursor: pointer;
-  border: none; 
-  outline: 0;
-  border-radius: 50%;
-  width: 60px; 
-  height: 60px;
-  margin: 10px 30px;
-  font-size: 20px;
-  font-family: 
-    Courier New, 
-    monospace;
-  font-weight: bold;
-  color: #444;
-  background: #e1e0c8;
-  box-shadow: 
-    -1px -2px 2px #c4bca3,
-    inset 1px 2px 3px #eeeeee,
-    inset -1px -2px 3px #c4bca3,
-    2px 6px 16px rgba(0,0,0,0.5);
-  transition: all 0.2s;
-}
-.pannel button:active, .pannel button.activated,
-.floor button:active, .floor button.activated {
-  color: #4565c3;
-  box-shadow: 
-    -1px -2px 2px #c4bca3,
-    inset 1px 2px 3px #eeeeee,
-    inset -1px -2px 3px #c4bca3,
-    1px 2px 12px rgba(0,0,0,0.5);
-}
-.floor button {
-  float: right;
-}
-.grid {
-  z-index: 9;
-  position: absolute; 
-  top: 0; 
-  width: 100%; 
-  height: 100%;
-  background-image:     
-    radial-gradient(
-      #777 2%, 
-      #ccc 4%,
-      transparent 5%,
-      transparent 100%),
-    linear-gradient(120deg, 
-      transparent   0%, 
-      transparent   45%,
-      #555          46%, 
-      #999          54%, 
-      transparent   55%, 
-      transparent  100%),
-    linear-gradient(60deg, 
-      transparent   0%, 
-      transparent   45%,
-      #555          46%, 
-      #999          54%, 
-      transparent   55%, 
-      transparent  100%);
-  background-size: 70px 120px;
-  transition: transform 2s;
-  transform: scaleX(0);
-}
-.grid.closed {
-  transform: scaleX(.6); 
-}
-.grid.left {
-  transform-origin: 0 0;
-  left: calc(-10% - 10px);
-  border-right: 15px solid #777;
-  box-shadow: 2px 0 #555;
-}
-.grid.right {
-  transform-origin: 100% 0;
-  right: calc(-10% - 10px);
-  border-left: 15px solid #777;
-  box-shadow: -2px 0 #555;
-}
-
+} */
 .btn-circle {
-  width: 45px;
-  height: 45px;
+  width: 100px;
+  height: 100px;
   line-height: 45px;
   text-align: center;
   padding: 0;
   border-radius: 50%;
+
 }
 .btn-circle-lg {
-width: 55px;
-height: 55px;
+width: 100px;
+height: 100px;
 line-height: 55px;
 font-size: 1.1rem;
 display: inline-block;
 }
+.fullpage
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: green;
+}
+.fullpage2
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: rgb(41, 38, 207);
+}
+.fullpage3
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: pink;
+}
+.fullpage4
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: red;
+}
+.fullpage5
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: purple;
+}
+.fullpage6
+{ 
+  height: 30vh;
+  overflow: hidden;
+  background-color: yellow;
+}
 
-/* .curtain {
-  width: 100%; Ensures the component is the full screen width */
-  /* height: 100vh; We're using this for demo purposes */
-  /* overflow: hidden; Allows us to slide the panels outside the container without them showing */
-/* } */
-  
-/* .curtain__wrapper {
-  width: 100%;
-  height: 100%;
+/* #fullpage section h1{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 10em;
+  text-transform: uppercase;
+} 
+fullpage section:nth-child(1)
+{
+  background: #f00;
+}
+#fullpage section:nth-child(2)
+{
+  background: #ff0;
+}
+#fullpage section:nth-child(3)
+{
+  background: #0ff;
+}
+#fullpage section:nth-child(4)
+{
+  background: green;
+}
+#fullpage section:nth-child(5)
+{
+  background: pink;
 } */
-      
-/* .curtain__panel {
-  background: silver;
-  width: 50%; Each panel takes up half the container */
-  /* height: 100vh; Used for demo purposes */
-  /* float: left; Makes sure panels are side-by-side */
-  /* position: relative; Needed to define the z-index */
-  /* z-index: 2; Places the panels in front of the prize */
-  /* transition: all 1s ease-out;
-} */
-
-/* .curtain__panel--left { */
-  /* Styles for sliding the left panel */
-/* } */
-
-/* .curtain__panel--right { */
-  /* Styles for sliding the right panel */
-/* } */
-  
-/* .curtain__prize {
-  background: #333;
-  position: absolute; Forces the prize position into the container start */
-  /* z-index: 1; Places the prize behind the panels, which are z-index 2 */
-  /* width: 100%;
-  height: 100%; */
-/* } */
-/* input[type=checkbox] {
-  position: absolute; /* Force the checkbox at the start of the container */
-  /* cursor: pointer; Indicate the curtain is clickable */
-  /* width: 100%; The checkbox is as wide as the component */
-  /* height: 100%; The checkbox is as tall as the component */
-  /* z-index: 100; Make sure the checkbox is on top of everything else */
-  /* opacity: 0; Hide the checkbox */
-/* } */ 
-/* When the checkbox is checked... */
-        
-/* Slide the first panel in */
-/* input[type=checkbox]:checked ~ div.curtain__panel--left {
-  transform: translateX(0);
-} */
-        
-/* Slide the second panel in */
-/* input[type=checkbox]:checked ~ div.curtain__panel--right {
-  transform: translateX(0);
-} */
-/* Slide the panel to the left out of the container */
-/* .curtain__panel--left {
-  transform: translateX(-100%);
-} */
-
-/* Slide the panel to the right out of the container */
-/* .curtain__panel--right {
-  transform: translateX(100%);
-} */
-/* Now we’re onto s */
-
