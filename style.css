@@ -1,13 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
 body {  
-  margin: 0; padding: 18px;
+  margin: 0; 
+  padding: 0;
   overflow: hidden;
+
   background-size: 100px 100%;
 }
 h1 {
   text-align: center;
-  /* text-shadow: 
-    hsla(0,0%,40%,.5) 0 -1px 0, 
-    hsla(0,0%,100%,.6) 0 2px 1px; */
 }
 /* The sidebar menu */
 .sidenav {
@@ -31,9 +33,9 @@ h1 {
   padding: 16px 30px 36px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: black;
   display: block;
-  background-color: aqua;
+  background-color:silver;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -77,68 +79,167 @@ line-height: 55px;
 font-size: 1.1rem;
 display: inline-block;
 }
-.fullpage
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: green;
-}
-.fullpage2
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: rgb(41, 38, 207);
-}
-.fullpage3
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: pink;
-}
-.fullpage4
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: red;
-}
-.fullpage5
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: purple;
-}
-.fullpage6
-{ 
-  height: 30vh;
-  overflow: hidden;
-  background-color: yellow;
-}
-
-/* #fullpage section h1{
+/* .fullpage section h1{
   margin: 0;
   padding: 0;
   text-align: center;
   line-height: 100vh;
   font-size: 10em;
   text-transform: uppercase;
-} 
-fullpage section:nth-child(1)
-{
-  background: #f00;
+}  */
+/* .fullpage
+{ 
+  /* margin: 0;
+  padding: 0; */
+  /* height: 100vh;
+  display: flex;
+  justify-content: center; */
+  /* overflow: hidden; */
+  /* text-align: center;
+  align-items: center;
+  background-color: green; */
+/* } */ 
+.fullpage {
+  height: 100vh;
+  background-color: hotpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#fullpage section:nth-child(2)
-{
-  background: #ff0;
+.fullpage2
+{ 
+  
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#fullpage section:nth-child(3)
-{
-  background: #0ff;
+.fullpage3
+{ 
+  height: 100vh;
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#fullpage section:nth-child(4)
-{
-  background: green;
+.fullpage4
+{ 
+  height: 100vh;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#fullpage section:nth-child(5)
-{
-  background: pink;
+.fullpage5
+{ 
+  height: 100vh;
+  background-color: rgb(255, 105, 105);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullpage6
+{ 
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* :root {
+  --black: #181818;
+  --beige: #F6EEE2;
+  --red: #e74c3c;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ul {
+  list-style: none;
+} */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font: 20px/30px sans-serif;
+}
+
+.container {
+  /* max-width: 1100px; */
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.text-intro {
+  text-align: center;
+  margin: 10vh 0;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.page-header {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 3fr;
+  padding: 40px 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-bottom: 150px;
+}
+
+.header-text {
+  font-weight: bold;
+}
+
+.section {
+  padding: 150px 0;
+}
+
+.section:nth-of-type(1),
+.section:nth-of-type(3),
+.page-footer {
+  background: var(--beige);
+}
+
+.section-text {
+  margin: 50px 0;
+  max-width: 800px;
+}
+
+.section-btn {
+  display: inline-block;
+  color: var(--beige);
+  background: var(--black);
+  min-width: 200px;
+  height: 50px;
+  padding: 9px 40px;
+  text-align: center;
+}
+
+
+/* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .page-footer {
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  padding: 15px;
+}
+
+.page-footer span {
+  color: var(--red);
 } */

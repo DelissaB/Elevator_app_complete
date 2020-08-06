@@ -1,33 +1,45 @@
-var smoothScroll = function(elementId) {
-  var MIN_PIXELS_PER_STEP = 16;
-  var MAX_SCROLL_STEPS = 30;
-  var target = document.getElementById(elementId);
-  var scrollContainer = target;
-  do {
-      scrollContainer = scrollContainer.parentNode;
-      if (!scrollContainer) return;
-      scrollContainer.scrollTop += 1;
-  } while (scrollContainer.scrollTop == 0);
+function smoothScroll(target, duration) {
+  var target = document.querySelector(target);
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var startTime = null;
 
-  var targetY = 0;
-  do {
-      if (target == scrollContainer) break;
-      targetY += target.offsetTop;
-  } while (target = target.offsetParent);
+  function animation(currentTime) {
+    if(startTime === null )startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0,run);
+      if(timeElapsed < duration) requestAnimationFrame(animation);
+  }
 
-  var pixelsPerStep = Math.max(MIN_PIXELS_PER_STEP,
-   (targetY - scrollContainer.scrollTop) / MAX_SCROLL_STEPS);
-
-  var stepFunc = function() {
-      scrollContainer.scrollTop =
-          Math.min(targetY, pixelsPerStep + scrollContainer.scrollTop);
-
-      if (scrollContainer.scrollTop >= targetY) {
-          return;
-      }
-
-      window.requestAnimationFrame(stepFunc);
-  };
-
-  window.requestAnimationFrame(stepFunc);
+function ease(t, b, c, d) {
+  t /-d / 2;
+  if (t < 1) return c / 2 * t * t + b;
+  t--;
+  return -c / 2 * (t * (t -2) - 1) + b;
 }
+
+  requestAnimationFrame(animation);
+}
+
+
+var first = document.querySelector('.fullpage');
+
+first.addEventListener('click', function(){
+  smoothScroll('.fullpage2', 1000);
+})
+
+
+
+// Elevator script included on the page, already.
+
+// window.onload = function() {
+//   var elevator = new Elevator({
+//     mainAudio: '/src/to/audio.mp3',
+//     endAudio: '/src/to/end-audio.mp3'
+//   });
+// }
+
+// // You can run the elevator, by calling.
+// elevator.elevate();
